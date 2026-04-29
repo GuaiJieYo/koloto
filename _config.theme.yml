@@ -1,0 +1,22 @@
+# 站点配置
+Site:
+  url: https://koloto.js.org # 站点地址
+  title: koloto # 站点标题
+  author: GuaiJie # 作者
+  description: 我的博客 # 站点描述
+  keywords: # 关键词
+    - koloto
+    - blog
+    - javascript
+    - nodejs
+    - vue
+    - GuaiJie
+  favicon: /favicon.ico # 站点LOGO
+  avatar: /avatar.png # 作者头像 or 站点LOGO
+
+# 友链配置
+Friends:
+  enable: true # 是否启用
+  random: true # 是否以随机顺序显示友链
+  title: 我的朋友们 # 友链页面的标题
+  description: 友链 # 友链页面的描述

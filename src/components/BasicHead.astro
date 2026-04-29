@@ -1,0 +1,39 @@
+---
+import themeConfig from "@/_config.theme.yml";
+
+interface Props {
+	title?: string;
+	kw?: string | string[];
+	desc?: string;
+}
+
+const {
+	title = themeConfig.Site.title,
+	kw = themeConfig.Site.keywords,
+	desc = themeConfig.Site.description,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+{/* 视口域 */}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+{/* SEO 核心 */}
+<title>{title}</title>
+<meta name="keywords" content={Array.isArray(kw) ? kw.join(",") : kw} />
+<meta name="description" content={desc} />
+
+{/* 元数据 */}
+<meta name="generator" content={Astro.generator} />
+<link rel="icon" href={themeConfig.Site.favicon} />
+<link rel="canonical" href={canonicalURL} />
+
+{/* 开启自动发现 RSS 摘要 */}
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={themeConfig.Site.title}
+  href={new URL("rss.xml", Astro.site)}
+/>
