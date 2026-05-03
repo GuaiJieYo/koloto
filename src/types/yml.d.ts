@@ -15,6 +15,17 @@ interface Site {
 	avatar: string;
 }
 
+// 导航栏配置
+interface Nav {
+	router: NavRouter[];
+}
+
+interface NavRouter {
+	name: string;
+	link: string;
+	icon: string;
+}
+
 // 友链配置
 interface Friends {
 	random: boolean;
@@ -25,6 +36,7 @@ interface Friends {
 // 站点信息配置
 interface ThemeConfig {
 	Site: Site;
+	Nav: Nav;
 	Friends: Friends;
 }
 // ======Config======
@@ -39,7 +51,7 @@ interface FriendsLists {
 }
 // ======FriendsLists======
 
-declare module "*theme.yml" {
+declare module "*_koloto.yml" {
 	const value: ThemeConfig;
 	export default value;
 }

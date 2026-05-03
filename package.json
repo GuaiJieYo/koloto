@@ -20,9 +20,14 @@
 		"@astrojs/check": "^0.9.9",
 		"@astrojs/mdx": "^5.0.4",
 		"@astrojs/rss": "^4.0.18",
+		"@astrojs/vue": "^6.0.1",
 		"astro": "^6.2.1",
+		"katex": "^0.16.45",
+		"rehype-katex": "^7.0.1",
+		"remark-math": "^6.0.0",
 		"sass": "^1.99.0",
 		"typescript": "^5.9.3",
+		"vue": "^3.5.33",
 		"yaml": "^2.8.3"
 	},
 	"devDependencies": {

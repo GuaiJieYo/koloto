@@ -1,17 +1,21 @@
 ---
 import { themeConfig } from "@libs/config";
 
+import "@styles/basic.scss";
+
 interface Props {
 	title?: string;
 	desc?: string;
 }
 
-const {
-	title = themeConfig.Site.title,
-	desc = themeConfig.Site.description,
-} = Astro.props;
+const { title = themeConfig.Site.title, desc = themeConfig.Site.description } =
+	Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const pathname = Astro.url.pathname;
+
+const canonicalURL = new URL(pathname, Astro.site); // 当前页面URL
+
+const isPostPage = pathname.startsWith("/posts/"); // 判断是否在文章页下
 ---
 
 {/* 视口域 */}
@@ -29,8 +33,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 {/* 开启自动发现 RSS 摘要 */}
 <link
-  rel="alternate"
-  type="application/rss+xml"
-  title={themeConfig.Site.title}
-  href={new URL("rss.xml", Astro.site)}
+	rel="alternate"
+	type="application/rss+xml"
+	title={themeConfig.Site.title}
+	href={new URL("rss.xml", Astro.site)}
 />
+
+{
+	// 只在文章页面启用 Katex 样式
+	isPostPage && (
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"
+		/>
+	)
+}

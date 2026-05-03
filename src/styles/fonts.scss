@@ -1,0 +1,31 @@
+/**
+* 当前使用字体 寒蝉圆黑体(中文) & Maple Mono(外文&Code)
+* 感谢由 @zeoseven 贡献的中文字体CDN
+* @link https://fonts.zeoseven.com/
+*/
+@import url("https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.min.css");
+@import url("https://fontsapi.zeoseven.com/83/main/result.css");
+
+@font-face {
+	font-family: "Maple Mono";
+	src: url("./fonts/MapleMono[wght].ttf");
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Maple Mono";
+	src: url("./fonts/MapleMono-Italic[wght].ttf");
+	font-style: italic;
+}
+
+body {
+	font-family: "Maple Mono", "Chill Round Gothic";
+	font-feature-settings:
+		"calt" 1,
+		"cv01" 1,
+		"cv61" 1,
+		"ss05" 1,
+		"ss06" 1,
+		"ss07" 1 !important;
+	font-weight: normal;
+}

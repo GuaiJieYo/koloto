@@ -8,8 +8,10 @@
 			"@/*": ["./*"],
 			"@src/*": ["./src/*"],
 			"@libs/*": ["./src/libs/*"],
-			"@components/*": ["./src/components/*"],
-			"@layouts/*": ["./src/layouts/*"]
-		}
+			"@styles/*": ["./src/styles/*"],
+			"@layouts/*": ["./src/layouts/*"],
+			"@components/*": ["./src/components/*"]
+		},
+		"jsx": "preserve"
 	}
 }

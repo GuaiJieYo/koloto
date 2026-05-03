@@ -1,4 +1,4 @@
-# 站点配置
+# 站点信息配置
 Site:
   url: https://koloto.js.org # 站点地址
   title: koloto # 站点标题
@@ -7,9 +7,29 @@ Site:
   favicon: /favicon.ico # 站点LOGO
   avatar: /avatar.png # 作者头像 or 站点LOGO
 
+# 导航配置
+# ICON使用的是remixcon.com的图标库
+# 详情请查看https://remixicon.com/
+Nav:
+  router: # 路由配置
+    - name: 主页
+      link: /
+      icon: home-line
+
+    - name: 关于
+      link: /about
+      icon: list-unordered
+    
+    - name: 我的朋友们
+      link: /friends
+      icon: group-line
+
 # 友链配置
 # 友链文件请查看 /config/friends.yml
 Friends:
   random: true # 是否以随机顺序显示友链
   title: 我的朋友们 # 友链页面的标题
   description: 友链 # 友链页面的描述
+
+# 全局配置
+Global:

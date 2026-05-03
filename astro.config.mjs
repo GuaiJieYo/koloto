@@ -7,10 +7,13 @@
  */
 // @ts-check
 import mdx from "@astrojs/mdx";
+import vue from "@astrojs/vue";
 import yaml from "@rollup/plugin-yaml";
 import { defineConfig } from "astro/config";
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
 import YAML from "yaml";
-import configFile from "./config/theme.yml?raw";
+import configFile from "./config/_koloto.yml?raw";
 
 const themeConfig = YAML.parse(configFile);
 
@@ -19,7 +22,15 @@ export default defineConfig({
 		mdx({
 			gfm: true,
 		}),
+		vue(), // 集成Vue支持
 	],
+	markdown: {
+		shikiConfig: {
+			theme: "dracula", // TODO: 手动配置主题
+		},
+		remarkPlugins: [remarkMath],
+		rehypePlugins: [rehypeKatex],
+	},
 	vite: {
 		plugins: [yaml()],
 	},

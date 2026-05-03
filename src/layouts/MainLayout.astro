@@ -1,9 +1,10 @@
 ---
-import BasicHead from "../components/BasicHead.astro";
+import BasicHead from "@components/BasicHead.astro";
+import TopNavigation from "@components/Navigation/TopNavigation.vue";
 
 interface Props {
-  title?: string;
-  desc?: string;
+	title?: string;
+	desc?: string;
 }
 
 const { title, desc } = Astro.props;
@@ -15,6 +16,9 @@ const { title, desc } = Astro.props;
     <BasicHead title={title} desc={desc} />
   </head>
   <body>
+    <header>
+      <TopNavigation />
+    </header>
     <slot />
   </body>
 </html>

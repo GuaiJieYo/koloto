@@ -1,3 +1,5 @@
+# 项目仍再开发中.... 所有功能都可能无法正常使用
+
 # Koloto
 <img align='right' src='./docs/imgs/koloto.png' width='200px' alt="Koloto logo">
 

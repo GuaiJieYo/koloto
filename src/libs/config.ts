@@ -1,4 +1,4 @@
-import themeConfigFile from "@/config/theme.yml";
+import themeConfigFile from "@/config/_koloto.yml";
 
 export const themeConfig = {
 	...themeConfigFile,
