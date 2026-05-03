@@ -1,0 +1,22 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import friendsList from "@/config/friends.yml";
+---
+
+<MainLayout>
+  <ul class="friends-list">
+    {
+      friendsList.map((friend) => (
+        <li class="friend-item">
+          <a href={friend.url} target="_blank" rel="noopener noreferrer">
+            <img src={friend.avatar} alt={friend.title} />
+            <div class="friend-info">
+              <h3>{friend.title}</h3>
+              <p>{friend.description}</p>
+            </div>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</MainLayout>

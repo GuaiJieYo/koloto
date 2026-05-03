@@ -1,0 +1,24 @@
+###################
+# 此文件用于配置友链 #
+# 配置详情请查看文档 #
+###################
+
+- title: 测试
+  description: 测试
+  url: https://koloto.js.org/test/
+  avatar: https://koloto.js.org/avatar.png
+
+- title: 测试
+  description: 测试
+  url: https://koloto.js.org/test/
+  avatar: https://koloto.js.org/avatar.png
+
+- title: 测试
+  description: 测试
+  url: https://koloto.js.org/test/
+  avatar: https://koloto.js.org/avatar.png
+
+- title: 测试
+  description: 测试
+  url: https://koloto.js.org/test/
+  avatar: https://koloto.js.org/avatar.png

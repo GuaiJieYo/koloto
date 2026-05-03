@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import BasicHead from "../components/BasicHead.astro";
+import NotFoundIMG from "../images/404NotFound.png";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BasicHead title="404 Not Found ~" />
+  </head>
+  <body>
+    Error 404: Page not found.
+    <div style="margin: auto;">
+      <Image
+        src={NotFoundIMG}
+        width={500}
+        alt="我的图像描述。"
+      />
+    </div>
+  </body>
+</html>
